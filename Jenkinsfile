@@ -1,5 +1,5 @@
 pipeline {
-    agent aly // 모든 서버에서 실행 가능
+    agent any // 모든 서버에서 실행 가능
 
     tools {
         maven 'maven 3.9.12'
@@ -22,10 +22,11 @@ pipeline {
 
     // 여러 단계를 그룹화
     stages ('Git Checkout') {
-          steps { // step : stage 안에서 실행할 실제 명령어
+        steps { 
+            // step : stage 안에서 실행할 실제 명령어
                  // Jenkins가 연결된 git 저장소에서 최신 코드 체크아웃
-                checkout scm
-                }
+            checkout scm
+        }
     }
 
     stages('Maven Build')  {
