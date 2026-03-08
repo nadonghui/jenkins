@@ -65,8 +65,9 @@ ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${REMOTE_USER}@$
     docker run -d --name ${CONTAINER_NAME} -p ${PORT}:${PORT} ${DOCKER_IMAGE}
 ENDSSH
                     """
-            }
-        }
-    }
-
+               }
+           }
+       }
+  
+   }
 }
